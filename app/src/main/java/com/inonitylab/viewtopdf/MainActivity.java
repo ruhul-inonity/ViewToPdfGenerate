@@ -23,6 +23,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.inonitylab.viewtopdf.utils.PermissionTaker;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -82,6 +84,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        PermissionTaker.PermissionTaker(this);
 
         optionsLayout = (LinearLayout) findViewById(R.id.options_layout);
         readLayout = (LinearLayout) findViewById(R.id.read_layout);
